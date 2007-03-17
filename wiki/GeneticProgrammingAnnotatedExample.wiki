@@ -1,6 +1,8 @@
+#summary Annotated example: how to design a Genetic Programming algorithm using GenetiK
+
 = Genetic Programming Annotated Example =
 This page describes the Genetic Programming example that comes with the library.
-The Genetic Programming is more complicated than Genetic Algorithm (see the [wiki:GAAnnotatedExample Genetic Algorithm annotated example]), because your individuals are represented as a tree, and you have to define each node (Gene) of tree.
+The Genetic Programming is more complicated than Genetic Algorithm (see the [GAAnnotatedExample Genetic Algorithm annotated example]), because your individuals are represented as a tree, and you have to define each node (Gene) of tree.
 
 This example will show how to use the framework to solve a simple regression function problem with the GP.
 Our goal is to find the function x + x^3 given a set of (x,y) observations.
