@@ -1,6 +1,7 @@
-#summary One-sentence summary of this page.
+#summary Overview of the Genetic Kernel project
+
 = GenetiK (Genetic Kernel) =
-GenetiK is a generic framework that will support [http://en.wikipedia.org/wiki/Evolutionary_algorithm evolutionary algorithms].
+GenetiK is a generic framework that supports [http://en.wikipedia.org/wiki/Evolutionary_algorithm evolutionary algorithms].
 
 According to the evolutionary approach, solutions to particular problems can be represented as individuals of a population. For each individual, a particular function, called ''fitness'', can be defined to associate a high fitness scores with "good" solutions.
 
@@ -15,19 +16,17 @@ This allows users to focus on finding good representations for candidate solutio
 
 == Project Structure ==
 The GenetiK framework is divided in 5 subprojects:
- * '''genetiK''' -- that includes the common base classes
-   * '''genetiK::ga''' -- specialized in dealing with [http://en.wikipedia.org/wiki/Genetic_algorithm Genetic Algorithms]
-   * '''genetiK::gp''' -- oriented towards [http://en.wikipedia.org/wiki/Genetic_programming Genetic Programming]
-     * '''genetiK::gp::st''' -- dedicated to Strongly Typed Genetic Programming
-   * '''genetiK::util''' -- includes all the utility classes
+ * *genetiK* -- that includes the common base classes
+   * *genetiK::ga* -- specialized in dealing with [http://en.wikipedia.org/wiki/Genetic_algorithm Genetic Algorithms]
+   * *genetiK::gp* -- oriented towards [http://en.wikipedia.org/wiki/Genetic_programming Genetic Programming]
+     * *genetiK::gp::st* -- dedicated to Strongly Typed Genetic Programming
+   * *genetiK::util* -- includes all the utility classes
 
 [http://casta.homedns.org/images/genetik/genetik_diag.png Here] you can find an UML diagram describing the intended structure of the framework.
-{{{
-#!html
-<a href="http://casta.homedns.org/genetik/images/genetik_diag.png"><img src="http://casta.homedns.org/genetik/images/genetik_diag_s.png" alt="Class diagram" /></a>
-}}}
 
-'''genetiK''' provides the common evolutionary algorithms functionalities, while '''genetiK::ga''', '''genetiK::gp''' and '''genetiK::gp::st''' contains the specific classes that should be extended to develop a specific solution. You can consult the [wiki:AnnotatedExample annotated example] (the genetic algorithm that comes with the library) to see how the framework can be used.
+http://casta.homedns.org/genetik/images/genetik_diag_s.png
+
+*genetiK* provides the common evolutionary algorithms functionalities, while *genetiK::ga*, *genetiK::gp* and *genetiK::gp::st* contains the specific classes that should be extended to develop a specific solution. You can consult the [GAAnnotatedExample annotated example] (the genetic algorithm that comes with the library) to see how the framework can be used.
 
 
 == Documentation ==
@@ -47,7 +46,7 @@ and compile with
 make
 }}}
 
-''(We hope that your current platform is supported http://forum.tgmonline.it/forum/images/smiley_icons/icon_lol.gif)''
+_(We hope that your current platform is supported http://forum.tgmonline.it/forum/images/smiley_icons/icon_lol.gif )_
 
 == Running the example ==
 After compiling the library, you can run the example by typing
@@ -55,12 +54,4 @@ After compiling the library, you can run the example by typing
 {{{
 ./bin/example
 }}}
-----
-{{{
-#!html
-<div align="center">
-<img alt="Powered by Debian" src="http://www.debian.org/logos/bouton.jpg"/>
-</div>
-}}}
-
 
