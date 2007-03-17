@@ -147,7 +147,6 @@ The ''EvolutionaryAlgorithm'' is created and runned in the ''GenetiProgramming::
 The code is very similar to the [wiki:AnnotatedExample ''GeneticAlgorithm'' example].
 
 {{{
-#!cpp
 int GeneticProgramming::run(){
 	double x=0;
 	util::Log* log = util::Log::getInstance();
