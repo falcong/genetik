@@ -1,0 +1,66 @@
+#summary One-sentence summary of this page.
+= GenetiK (Genetic Kernel) =
+GenetiK is a generic framework that will support [http://en.wikipedia.org/wiki/Evolutionary_algorithm evolutionary algorithms].
+
+According to the evolutionary approach, solutions to particular problems can be represented as individuals of a population. For each individual, a particular function, called ''fitness'', can be defined to associate a high fitness scores with "good" solutions.
+
+Starting from any set of individuals, evolving this population (with a process that loosely resembles darwinian selection in biology) results, after a sufficient number of ''generations'', in a new population of high-fitness individuals.
+In other words, starting from any set (even randomly generated) of potential solutions to a problem, it is possible to obtain new sets of progressively "better" solutions, eventually resulting in the selection of an optimal (or near-optimal) solution.
+
+Therefore, depending on the nature of the problem to be solved, it is possible to find a good solution by expressing candidate solutions and their fitness in an appropriate way.
+Even adopting the same evolutionary algorithm, but two different representations of individuals and fitness, can lead to dramatically different results, therefore finding a good representation of individuals and their fitness is crucial to the success or failure of a particular application.
+
+The idea behind the GenetiK project is to let users experiment with evolutionary computation without having to code from scratch the algorithm that deals with the evolution itself, but rather let them concentrate on their specific tasks and objectives.
+This allows users to focus on finding good representations for candidate solution, the best ways to measure fitness and other aspects, but, at the same time, allowing them to fine-tune the algorithm to their specific needs by customizing its behaviour, if required.
+
+== Project Structure ==
+The GenetiK framework is divided in 5 subprojects:
+ * '''genetiK''' -- that includes the common base classes
+   * '''genetiK::ga''' -- specialized in dealing with [http://en.wikipedia.org/wiki/Genetic_algorithm Genetic Algorithms]
+   * '''genetiK::gp''' -- oriented towards [http://en.wikipedia.org/wiki/Genetic_programming Genetic Programming]
+     * '''genetiK::gp::st''' -- dedicated to Strongly Typed Genetic Programming
+   * '''genetiK::util''' -- includes all the utility classes
+
+[http://casta.homedns.org/images/genetik/genetik_diag.png Here] you can find an UML diagram describing the intended structure of the framework.
+{{{
+#!html
+<a href="http://casta.homedns.org/genetik/images/genetik_diag.png"><img src="http://casta.homedns.org/genetik/images/genetik_diag_s.png" alt="Class diagram" /></a>
+}}}
+
+'''genetiK''' provides the common evolutionary algorithms functionalities, while '''genetiK::ga''', '''genetiK::gp''' and '''genetiK::gp::st''' contains the specific classes that should be extended to develop a specific solution. You can consult the [wiki:AnnotatedExample annotated example] (the genetic algorithm that comes with the library) to see how the framework can be used.
+
+
+== Documentation ==
+Please refer to [http://casta.homedns.org/genetik/doc/index.html HTML documentation] (generated from Changeset [123]) for more information.
+
+== Getting the code ==
+To check out the current version of GenetiK use
+
+
+{{{
+svn co https://svn.sourceforge.net/svnroot/genetik/genetik/trunk genetik
+}}}
+
+and compile with
+
+{{{
+make
+}}}
+
+''(We hope that your current platform is supported http://forum.tgmonline.it/forum/images/smiley_icons/icon_lol.gif)''
+
+== Running the example ==
+After compiling the library, you can run the example by typing
+
+{{{
+./bin/example
+}}}
+----
+{{{
+#!html
+<div align="center">
+<img alt="Powered by Debian" src="http://www.debian.org/logos/bouton.jpg"/>
+</div>
+}}}
+
+
